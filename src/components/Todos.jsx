@@ -1,40 +1,47 @@
 import React from "react";
+import Todo from "./Todo";
 
-const Todos=()=>{
-  return(
+const Todos = () => {
+  const todos = [
+    {
+      text: "Belajar React!"
+    },
+    {
+      text: "Belajar props di React"
+    },
+    {
+      text: "Belajar React Hooks"
+    },
+    {
+      text: "Belajar State di React"
+    },
+    {
+      text: "Belajar React!"
+    },
+    {
+      text: "Belajar React!"
+    },
+    {
+      text: "Belajar props di React"
+    },
+    {
+      text: "Belajar React Hooks"
+    },
+    {
+      text: "Belajar State di React"
+    },
+    {
+      text: "Belajar React!"
+    }
+  ];
+
+  return (
     <section className="todos">
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-    <div className="todo">
-      <span className="todo-text">Learning React</span>
-    </div>
-  </section>
-  )
-}
+      {todos.map((t) => {
+        return <Todo text={t.text} />;
+      })}
+    </section>
+  );
+};
 
 export default Todos;
