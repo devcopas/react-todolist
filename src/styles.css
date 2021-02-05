@@ -108,6 +108,9 @@ html {
   outline: unset;
   border-bottom: 1px solid hsl(193, 95%, 20%);
   color: hsl(0, 0%, 95%);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
 
 .add-btn {

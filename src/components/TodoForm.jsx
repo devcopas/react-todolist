@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState("");
-  console.log(value);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +13,6 @@ const TodoForm = ({ addTodo }) => {
     }
 
     addTodo(value);
-    alert(value);
     setValue("");
   };
 

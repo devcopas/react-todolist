@@ -5,8 +5,8 @@ import Todo from "./Todo";
 const Todos = ({ todos }) => {
   return (
     <section className="todos">
-      {todos.map((t) => {
-        return <Todo text={t.text} />;
+      {todos.map((t, i) => {
+        return <Todo key={i} text={t.text} />;
       })}
     </section>
   );
