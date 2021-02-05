@@ -107,9 +107,6 @@ html {
   flex: 1;
   outline: unset;
   border-bottom: 1px solid hsl(193, 95%, 20%);
-}
-
-.add-input:focus {
   color: hsl(0, 0%, 95%);
 }
 
