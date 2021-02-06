@@ -23,9 +23,10 @@ const TodoForm = ({ addTodo }) => {
           type="text"
           className="add-input"
           value={value}
+          autoFocus={true}
           onChange={(e) => setValue(e.target.value)}
         />
-        <button className="add-btn">Add</button>
+        <button className="add-btn">Save</button>
       </form>
     </section>
   );
