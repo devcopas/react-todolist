@@ -12,6 +12,11 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    if (value.length > 50) {
+      alert("text cannot be longer than 50 characters");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
@@ -37,11 +42,8 @@ const TodoForm = ({ addTodo, showAdd }) => {
 };
 
 TodoForm.propTypes = {
-  addTodo: PropTypes.func.isRequired
-};
-
-TodoForm.propTypes = {
-  showAdd: PropTypes.bool
+  addTodo: PropTypes.func.isRequired,
+  showAdd: PropTypes.bool.isRequired
 };
 
 export default TodoForm;
