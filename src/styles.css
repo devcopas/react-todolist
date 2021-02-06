@@ -147,7 +147,7 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   border-bottom: 1px solid hsla(193, 95%, 20%, 0.2);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .todo-text {
@@ -158,4 +158,17 @@ html {
   transform: translateX(-50%);
   color: #fff;
   letter-spacing: 1px;
+}
+
+.todos-placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem 10rem;
+}
+
+.todos-placeholder-add {
+  font-family: "Bungee", sans-serif;
+  color: var(--main-blue-color);
 }
