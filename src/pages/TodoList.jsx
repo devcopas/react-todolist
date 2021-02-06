@@ -14,8 +14,12 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value, isCompleted: false }];
-    setTodos(addedTodo);
+    if (todos.length < 10) {
+      const addedTodo = [...todos, { text: value, isCompleted: false }];
+      setTodos(addedTodo);
+    } else {
+      alert("Cannot add new todo, Only 10 todos are allowed!");
+    }
   };
 
   const completeTodo = (index) => {
@@ -29,7 +33,11 @@ const TodoList = () => {
   return (
     <Paper>
       <Header showAddToggle={showAddToggle} showAdd={showAdd} />
-      <TodoForm addTodo={addTodo} showAdd={showAdd} />
+      <TodoForm
+        addTodo={addTodo}
+        showAdd={showAdd}
+        todosLength={todos.length}
+      />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
   );
