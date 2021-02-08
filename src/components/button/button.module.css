@@ -18,10 +18,12 @@
   outline: unset;
 }
 
-.headerBtn .mainBlueColor:hover {
+.mainBlueColor:hover {
   color: hsl(193, 95%, 50%);
+  transform: scale(1.05, 1.05);
 }
 
-.headerBtn .mainRedColor:hover {
+.mainRedColor:hover {
   color: hsl(340, 95%, 63%);
+  transform: scale(1.05, 1.05);
 }
