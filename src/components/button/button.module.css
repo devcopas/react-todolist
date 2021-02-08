@@ -1,0 +1,27 @@
+.mainBlueColor {
+  color: var(--main-blue-color);
+}
+
+.mainRedColor {
+  color: var(--main-red-color);
+}
+
+.headerBtn {
+  width: 20%;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Bungee", sans-serif;
+  padding: 16px;
+  cursor: pointer;
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.headerBtn .mainBlueColor:hover {
+  color: hsl(193, 95%, 50%);
+}
+
+.headerBtn .mainRedColor:hover {
+  color: hsl(340, 95%, 63%);
+}
