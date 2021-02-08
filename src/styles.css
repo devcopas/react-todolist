@@ -38,7 +38,7 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.container {
+/* .container {
   height: 800px;
   width: 600px;
   background-color: #282c34;
@@ -51,7 +51,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 /* .header {
   display: flex;
