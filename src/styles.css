@@ -137,7 +137,7 @@ html {
   min-height: 500px;
 }
 
-.todo {
+/* .todo {
   position: relative;
   flex: 1 0 auto;
   text-align: center;
@@ -157,7 +157,7 @@ html {
   transform: translateX(-50%);
   color: #fff;
   letter-spacing: 1px;
-}
+} */
 
 .todos-placeholder {
   color: #fff;
