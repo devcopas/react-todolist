@@ -1,0 +1,18 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.todosPlaceholder {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem 10rem;
+}
+
+.todosPlaceholderHighlightText {
+  font-family: "Bungee", sans-serif;
+  color: var(--main-blue-color);
+}

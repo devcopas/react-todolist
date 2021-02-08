@@ -131,11 +131,11 @@ html {
   background-color: hsl(193, 95%, 60%);
 } */
 
-.todos {
+/* .todos {
   display: flex;
   flex-direction: column;
   min-height: 500px;
-}
+} */
 
 /* .todo {
   position: relative;
@@ -159,7 +159,7 @@ html {
   letter-spacing: 1px;
 } */
 
-.todos-placeholder {
+/* .todos-placeholder {
   color: #fff;
   text-align: center;
   font-size: 1.8rem;
@@ -170,4 +170,4 @@ html {
 .todos-placeholder-add {
   font-family: "Bungee", sans-serif;
   color: var(--main-blue-color);
-}
+} */
