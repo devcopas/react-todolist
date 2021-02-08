@@ -88,7 +88,7 @@ html {
   color: hsl(340, 95%, 63%);
 } */
 
-.add {
+/* .add {
   padding: 16px;
 }
 
@@ -129,7 +129,7 @@ html {
 
 .add-btn:hover {
   background-color: hsl(193, 95%, 60%);
-}
+} */
 
 .todos {
   display: flex;

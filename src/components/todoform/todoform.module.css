@@ -1,0 +1,42 @@
+.add {
+  padding: 16px;
+}
+
+.addForm {
+  display: flex;
+  align-items: flex-end;
+}
+
+.addInput {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+  margin-right: 10px;
+  flex: 1;
+  outline: unset;
+  border-bottom: 1px solid hsl(193, 95%, 20%);
+  color: hsl(0, 0%, 95%);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.addBtn {
+  font-size: 1.4rem;
+  padding: 0 16px;
+  border-radius: 4px;
+  color: #282c34;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: "Bungee", sans-serif;
+  background: var(--main-blue-color);
+  border: unset;
+  outline: unset;
+}
+
+.addBtn:hover {
+  background-color: hsl(193, 95%, 60%);
+}
