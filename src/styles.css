@@ -5,8 +5,8 @@
 }
 
 :root {
-  --main-blue-color: #61dafb;
-  --main-red-color: #fb6194;
+  --main-blue-color: hsl(193, 95%, 68%);
+  --main-red-color: hsl(340, 95%, 68%);
 }
 
 /* .main-blue-color {

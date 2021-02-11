@@ -5,6 +5,8 @@
 import { jsx } from "@emotion/react";
 // jika menggunakan classic js runtime //
 
+import { useTheme } from "@emotion/react";
+
 // jika menggunakan automatic js runtime //
 /** (@)jsxImportSource @emotion/react */
 // jika menggunakan automatic js runtime //
@@ -33,6 +35,8 @@ const Button = ({ text, onClick, color }) => {
   // });
   //---- jika menggunakan css module ----//
 
+  const theme = useTheme();
+
   return (
     //---- jika menggunakan css module ----//
     // <button className={classNames} onClick={onClick}>
@@ -41,7 +45,7 @@ const Button = ({ text, onClick, color }) => {
     //---- jika menggunakan css module ----//
 
     //---- jika menggunakan css in js ----//
-    <button css={styles.button({ color })} onClick={onClick}>
+    <button css={styles.button({ color, theme })} onClick={onClick}>
       {text}
     </button>
     //---- jika menggunakan css in js ----//

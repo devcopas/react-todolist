@@ -5,6 +5,8 @@
 import { jsx } from "@emotion/react";
 // jika menggunakan classic js runtime //
 
+import { useTheme } from "@emotion/react";
+
 // jika menggunakan automatic js runtime //
 // /** (@)jsxImportSource @emotion/react */
 // jika menggunakan automatic js runtime //
@@ -22,6 +24,8 @@ import * as styles from "./header.styles";
 //---- -------------------------- ----//
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
+  const theme = useTheme();
+
   return (
     //---- jika menggunakan css module ----//
     // <section className={styles.header}>
@@ -34,7 +38,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
     //---- jika menggunakan css in js ----//
     <section css={styles.header}>
       <Button text={showAdd ? "Close" : "Add"} onClick={showAddToggle} />
-      <h1 css={styles.headerTitle}>Todo List</h1>
+      <h1 css={styles.headerTitle(theme)}>Todo List</h1>
       <Button text="Clear" color="red" onClick={clearTodos} />
     </section>
     //---- jika menggunakan css in js ----//

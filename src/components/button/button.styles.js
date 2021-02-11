@@ -1,21 +1,25 @@
 import { css } from "@emotion/react";
 
-export const button = ({ color }) => {
+export const button = ({ color, theme }) => {
   let textColor;
   let textColorHover;
 
+  const {
+    color: { primary, darker }
+  } = theme;
+
   switch (color) {
     case "blue":
-      textColor = "#61dafb";
-      textColorHover = "hsl(193, 95%, 50%);";
+      textColor = primary.blue;
+      textColorHover = darker.blue;
       break;
     case "red":
-      textColor = "#fb6194";
-      textColorHover = "hsl(340, 95%, 63%)";
+      textColor = primary.red;
+      textColorHover = darker.red;
       break;
     default:
-      textColor = "#61dafb";
-      textColorHover = "hsl(193, 95%, 50%);";
+      textColor = primary.blue;
+      textColorHover = darker.blue;
   }
 
   return css`
