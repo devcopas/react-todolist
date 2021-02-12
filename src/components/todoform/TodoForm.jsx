@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+/** @jsxImportSource @emotion/react */
+import { useTheme } from "@emotion/react";
+import * as styles from "./todoform.styles";
 import PropTypes from "prop-types";
-import styles from "./todoform.module.css";
+import React from "react";
+// import React, { useState } from "react";
+// import styles from "./todoform.module.css";
 
 const TodoForm = ({ addTodo, showAdd }) => {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
+  const [value, setValue] = React.useState("");
+  const theme = useTheme();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -24,16 +30,16 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
   if (showAdd) {
     return (
-      <section className={styles.add}>
-        <form className={styles.addForm} onSubmit={handleFormSubmit}>
+      <section css={styles.add}>
+        <form css={styles.addForm} onSubmit={handleFormSubmit}>
           <input
             type="text"
-            className={styles.addInput}
+            css={styles.addInput(theme)}
             value={value}
             autoFocus={true}
             onChange={(e) => setValue(e.target.value)}
           />
-          <button className={styles.addBtn}>Save</button>
+          <button css={styles.addBtn(theme)}>Save</button>
         </form>
       </section>
     );
