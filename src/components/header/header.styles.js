@@ -11,7 +11,7 @@ export const headerTitle = (theme) => {
   return css`
     width: 60%;
     text-align: center;
-    color: ${theme.color.primary.white};
+    color: ${theme.color.light.base};
     font-size: 3.6rem;
     font-family: "Bungee", sans-serif;
     text-transform: lowercase;

@@ -5,7 +5,7 @@
 }
 
 :root {
-  --main-blue-color: hsl(193, 95%, 68%);
+  --main-blue-color: rgb(95, 217, 250);
   --main-red-color: hsl(340, 95%, 68%);
 }
 
@@ -26,7 +26,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  background: #20232a;
+  background: hsl(222, 14%, 15%);
   height: 100vh;
 }
 

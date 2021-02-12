@@ -5,21 +5,21 @@ export const button = ({ color, theme }) => {
   let textColorHover;
 
   const {
-    color: { primary, darker }
+    color: { primary, secondary }
   } = theme;
 
   switch (color) {
     case "blue":
-      textColor = primary.blue;
-      textColorHover = darker.blue;
+      textColor = primary.base;
+      textColorHover = primary.darker;
       break;
     case "red":
-      textColor = primary.red;
-      textColorHover = darker.red;
+      textColor = secondary.base;
+      textColorHover = secondary.darker;
       break;
     default:
-      textColor = primary.blue;
-      textColorHover = darker.blue;
+      textColor = primary.base;
+      textColorHover = primary.darker;
   }
 
   return css`
