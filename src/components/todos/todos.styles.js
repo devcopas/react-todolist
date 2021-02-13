@@ -20,4 +20,7 @@ export const highlightText = (theme) =>
   css`
     font-family: "Bungee", sans-serif;
     color: ${theme.color.primary.base};
+    &:hover {
+      color: ${theme.color.primary.setLightness(45)};
+    }
   `;
