@@ -23,7 +23,7 @@ export const button = ({ color, theme }) => {
   }
 
   return css`
-    width: 20%;
+    /* width: 20%; */
     font-size: 1.8rem;
     text-transform: uppercase;
     color: ${textColor};

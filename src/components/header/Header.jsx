@@ -15,6 +15,8 @@ import PropTypes from "prop-types";
 import Button from "../button/Button";
 import * as styles from "./header.styles";
 //---- ------------------------- ----//
+import Container from "../../layout/Container";
+import Item from "../../layout/Item";
 
 //---- jika menggunakan css module ----//
 // import React from "react";
@@ -36,12 +38,26 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
     //---- jika menggunakan css module ----//
 
     //---- jika menggunakan css in js ----//
-    <section css={styles.header}>
-      <Button text={showAdd ? "Close" : "Add"} onClick={showAddToggle} />
-      <h1 css={styles.headerTitle(theme)}>Todo List</h1>
-      <Button text="Clear" color="red" onClick={clearTodos} />
-    </section>
+    // <section css={styles.header}>
+    //   <Button text={showAdd ? "Close" : "Add"} onClick={showAddToggle} />
+    //   <h1 css={styles.headerTitle(theme)}>Todo List</h1>
+    //   <Button text="Clear" color="red" onClick={clearTodos} />
+    // </section>
     //---- jika menggunakan css in js ----//
+
+    <section className="header-component">
+      <Container alignItems="flex-start">
+        <Item flex="1">
+          <Button text={showAdd ? "Close" : "Add"} onClick={showAddToggle} />
+        </Item>
+        <Item flex="2">
+          <h1 css={styles.headerTitle(theme)}>Todo List</h1>
+        </Item>
+        <Item flex="1" align="right">
+          <Button text="Clear" color="red" onClick={clearTodos} />
+        </Item>
+      </Container>
+    </section>
   );
 };
 

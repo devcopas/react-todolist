@@ -1,13 +1,14 @@
-import React from "react";
+/** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import PropTypes from "prop-types";
 
-const Item = (children, flex) => {
+const Item = ({ children, flex, align }) => {
   return (
     <div
       className="flex-item"
       css={css`
-        ${flex}
+        flex: ${flex};
+        text-align: ${align};
       `}
     >
       {children}
@@ -20,7 +21,8 @@ Item.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  align: PropTypes.oneOf(["left", "center", "right", "justify"])
 };
 
 export default Item;
