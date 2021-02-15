@@ -47,13 +47,13 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
 
     <section className="header-component">
       <Container alignItems="flex-start">
-        <Item flex="1">
+        <Item flex="1" padding="1rem">
           <Button text={showAdd ? "Close" : "Add"} onClick={showAddToggle} />
         </Item>
         <Item flex="2">
           <h1 css={styles.headerTitle(theme)}>Todo List</h1>
         </Item>
-        <Item flex="1" align="right">
+        <Item flex="1" padding="1rem" align="right">
           <Button text="Clear" color="red" onClick={clearTodos} />
         </Item>
       </Container>

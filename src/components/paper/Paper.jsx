@@ -10,10 +10,17 @@ const Paper = ({ children }) => {
   const theme = useTheme();
 
   return (
+    // menggunakan css module
     // <div className={styles.container}>
     //   <div className={styles.frame}>{children}</div>
     // </div>
 
+    // menggunakan css in js
+    // <div css={styles.paper(theme)}>
+    //   <div css={styles.frame(theme)}>{children}</div>
+    // </div>
+
+    // menggunakan layout container dan item
     <div css={styles.paper(theme)}>
       <div css={styles.frame(theme)}>{children}</div>
     </div>

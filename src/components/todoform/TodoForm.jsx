@@ -6,6 +6,10 @@ import React from "react";
 // import React, { useState } from "react";
 // import styles from "./todoform.module.css";
 
+import Button from "../button/Button";
+import Container from "../../layout/Container";
+import Item from "../../layout/Item";
+
 const TodoForm = ({ addTodo, showAdd }) => {
   // const [value, setValue] = useState("");
   const [value, setValue] = React.useState("");
@@ -30,16 +34,23 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
   if (showAdd) {
     return (
-      <section css={styles.add}>
-        <form css={styles.addForm} onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            css={styles.addInput(theme)}
-            value={value}
-            autoFocus={true}
-            onChange={(e) => setValue(e.target.value)}
-          />
-          <button css={styles.addBtn(theme)}>Save</button>
+      <section className="todoform-component">
+        <form onSubmit={handleFormSubmit}>
+          <Container alignItems="flex-end">
+            <Item flex="1" padding="0 15px">
+              <input
+                type="text"
+                css={styles.addInput(theme)}
+                value={value}
+                autoFocus={true}
+                onChange={(e) => setValue(e.target.value)}
+              />
+            </Item>
+            <Item padding="0 15px">
+              <Button text="Save" color={"custom"} />
+              {/* <button css={styles.addBtn(theme)}>Save</button> */}
+            </Item>
+          </Container>
         </form>
       </section>
     );

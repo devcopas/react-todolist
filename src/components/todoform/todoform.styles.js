@@ -1,30 +1,31 @@
 import { css } from "@emotion/react";
 
-export const add = () =>
-  css`
-    padding: 16px;
-  `;
+// export const add = () =>
+//   css`
+//     padding: 16px;
+//   `;
 
-export const addForm = () =>
-  css`
-    display: flex;
-    align-items: flex-end;
-  `;
+// export const addForm = () =>
+//   css`
+//     display: flex;
+//     align-items: flex-end;
+//   `;
 
 export const addInput = (theme) =>
   css`
     background: unset;
     border: unset;
     padding: 0 64px;
-    margin-right: 10px;
-    flex: 1;
+    /* margin-right: 10px; */
+    /* flex: 1; */
     outline: unset;
     border-bottom: 1px solid ${theme.color.primary.setLightness(20)};
     color: ${theme.color.light.darker};
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
+    width: 100%;
   `;
 
 export const addBtn = (theme) =>
