@@ -12,7 +12,9 @@ import { useTheme } from "@emotion/react";
 // jika menggunakan automatic js runtime //
 
 import PropTypes from "prop-types";
-import Button from "../button/Button";
+// import Button from "../button/Button";
+import Button from "../button/ButtonNoJSX";
+
 import * as styles from "./header.styles";
 //---- ------------------------- ----//
 import Container from "../../layout/Container";

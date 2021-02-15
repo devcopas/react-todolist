@@ -5,13 +5,16 @@ import { useTheme } from "@emotion/react";
 import PropTypes from "prop-types";
 import * as styles from "./button.styles";
 
-const Button = ({ text, onClick, color }) => {
+const Button = ({ text, color, onClick }) => {
   const theme = useTheme();
 
-  return (
-    <button css={styles.button({ color, theme })} onClick={onClick}>
-      {text}
-    </button>
+  return jsx(
+    "button",
+    {
+      css: styles.button({ color, theme }),
+      onClick: onClick
+    },
+    text
   );
 };
 
