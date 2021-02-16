@@ -33,4 +33,5 @@ Paper.propTypes = {
     PropTypes.node
   ])
 };
+
 export default Paper;
