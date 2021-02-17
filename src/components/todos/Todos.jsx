@@ -14,56 +14,6 @@ const Todos = ({ todos, completeTodo }) => {
   const theme = useTheme();
 
   return (
-    // <section className={styles.todos}>
-    //   {todos.length > 0 &&
-    //     todos.map((t, i) => {
-    //       return (
-    //         <Todo
-    //           key={i}
-    //           text={t.text}
-    //           completeTodo={completeTodo}
-    //           index={i}
-    //           isCompleted={t.isCompleted}
-    //         />
-    //       );
-    //     })}
-    //   {todos.length === 0 && (
-    //     <div className={styles.todosPlaceholder}>
-    //       <p>"No todos available"</p>
-    //       <p>
-    //         Add todo by clicking{" "}
-    //         <span className={styles.todosPlaceholderHighlightText}>Add</span>{" "}
-    //         button on the top left corner.
-    //       </p>
-    //     </div>
-    //   )}
-    // </section>
-
-    // <section css={styles.todos}>
-    //   {todos.length > 0 &&
-    //     todos.map((t, i) => {
-    //       return (
-    //         <Todo
-    //           key={i}
-    //           text={t.text}
-    //           completeTodo={completeTodo}
-    //           index={i}
-    //           isCompleted={t.isCompleted}
-    //         />
-    //       );
-    //     })}
-    //   {todos.length === 0 && (
-    //     <div css={styles.todosPlaceholder(theme)}>
-    //       <p>"No todos available"</p>
-    //       <p>
-    //         Add todo by clicking{" "}
-    //         <span css={styles.highlightText(theme)}>Add</span> button on the top
-    //         left corner.
-    //       </p>
-    //     </div>
-    //   )}
-    // </section>
-
     <section className="todos-component">
       <Container flexDirection="column" minHeight="500px">
         {todos.length > 0 &&
