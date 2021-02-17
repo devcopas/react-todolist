@@ -6,7 +6,6 @@ import { withTheme, css } from "@emotion/react";
 class Todo extends React.Component {
   render() {
     const { text, completeTodo, index, isCompleted } = this.props;
-    console.log(this.props);
 
     return (
       <StyledTodo onClick={() => completeTodo(index)}>
