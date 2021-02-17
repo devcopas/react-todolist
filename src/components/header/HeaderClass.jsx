@@ -38,7 +38,7 @@ class Header extends React.Component {
 
   static propTypes = {
     showAddToggle: PropTypes.func.isRequired,
-    showAdd: PropTypes.func.isRequired,
+    showAdd: PropTypes.bool.isRequired,
     clearTodos: PropTypes.func.isRequired
   };
 }

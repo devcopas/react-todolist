@@ -3,7 +3,8 @@ import { useTheme } from "@emotion/react";
 import * as styles from "./todos.styles";
 
 import PropTypes from "prop-types";
-import Todo from "../todo/Todo";
+// import Todo from "../todo/Todo";
+import Todo from "../todo/TodoClass";
 import Container from "../../layout/Container";
 
 // import React from "react";
