@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
+
 import Container from "../../layout/Container";
 import Todo from "../todo/TodoClass";
 
 class Todos extends React.Component {
-  todosElement = () => {
+  showTodos = () => {
     const { todos, completeTodo } = this.props;
-
     return todos.map((t, i) => (
       <Todo
         key={i}
@@ -20,28 +20,26 @@ class Todos extends React.Component {
     ));
   };
 
-  placeholderElement = () => (
-    <StyledPlaceHolder>
-      <p>"No todos available"</p>
-      <p>
-        Add todo by clicking
-        <StyledPlaceHolderText> Add </StyledPlaceHolderText>
-        button on the top left corner
-      </p>
-    </StyledPlaceHolder>
+  showPlaceholder = () => (
+    <StyledPlaceholder>
+      {[
+        <p key="0">No Todos Available</p>,
+        "Add todo by clicking",
+        <StyledHighlightText key="1"> Add </StyledHighlightText>,
+        "button on the top left corner."
+      ]}
+    </StyledPlaceholder>
   );
 
   render() {
     const {
-      todosElement: todos,
-      placeholderElement: placeholder,
-      props: { todos: todoList }
+      props: { todos }
     } = this;
 
     return (
       <section className="todos-component">
         <Container flexDirection="column" minHeight="500px">
-          {todoList.length > 0 ? todos() : placeholder()}
+          {todos.length > 0 ? this.showTodos() : this.showPlaceholder()}
         </Container>
       </section>
     );
@@ -58,15 +56,24 @@ class Todos extends React.Component {
   };
 }
 
-const StyledPlaceHolder = styled.div`
+// --- Styling Component --- //
+const StyledPlaceholder = styled.div`
   color: ${(props) => props.theme.color.light.base};
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
   padding: 1rem 10rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: ${(props) => props.theme.color.light.setLightness(95, 0.5)};
+
+  > p:first-of-type {
+    margin: 0.5em 0;
+    color: ${(props) => props.theme.color.light.setLightness(80, 0.5)};
+  }
 `;
 
-const StyledPlaceHolderText = styled.span`
+const StyledHighlightText = styled.span`
   font-family: "Bungee", sans-serif;
   color: ${(props) => props.theme.color.primary.base};
 `;
