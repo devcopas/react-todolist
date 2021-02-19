@@ -26,7 +26,7 @@ const Content = () => {
         <Item padding="0 2rem" flex="1">
           <span css={styles.paragraph(theme)}>
             <p>
-              By building this app i have learned React fromt the ground up. I
+              By building this app i have learned React from the ground up. I
               know more about components, props, function, class, emotion css,
               styling in react, CSS in JS, React Router .... and many more!
             </p>

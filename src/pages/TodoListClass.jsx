@@ -7,12 +7,31 @@ import Container from "../layout/Container";
 
 class TodoList extends React.Component {
   state = {
-    todos: [
-      { text: "Javascript", isCompleted: false },
-      { text: "React", isCompleted: false }
-    ],
+    todos: [],
     showAdd: false
   };
+
+  componentDidMount() {
+    const { todos, showAdd } = this.state;
+    const todosStateLocalStorage =
+      JSON.parse(localStorage.getItem("todos")) || todos;
+    const showAddStateLocalStorage =
+      JSON.parse(localStorage.getItem("showAdd")) || showAdd;
+
+    console.log(this.state.showAdd);
+    this.setState({
+      todos: todosStateLocalStorage,
+      showAdd: showAddStateLocalStorage
+    });
+  }
+
+  componentDidUpdate() {
+    const { todos, showAdd } = this.state;
+
+    localStorage.setItem("todos", JSON.stringify(todos));
+    console.log("tes");
+    localStorage.setItem("showAdd", JSON.stringify(showAdd));
+  }
 
   addTodo = (value) => {
     if (this.state.todos.length < 10) {
