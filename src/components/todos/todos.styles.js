@@ -20,7 +20,25 @@ export const highlightText = (theme) =>
   css`
     font-family: "Bungee", sans-serif;
     color: ${theme.color.primary.base};
-    &:hover {
-      color: ${theme.color.primary.setLightness(45)};
+  `;
+
+export const seeAboutPage = (theme) =>
+  css`
+    font-family: "Open Sans", sans-serif;
+    color: ${theme.color.light.base};
+    font-size: 1.6rem;
+    text-align: center;
+
+    > span > :first-of-type {
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: red;
+      text-decoration: none;
+      color: ${theme.color.primary.base};
+
+      &:hover {
+        color: ${theme.color.primary.darker};
+        text-decoration: underline;
+      }
     }
   `;

@@ -1,5 +1,8 @@
 import "./styles.css";
 import { ThemeProvider } from "@emotion/react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import About from "./pages/About";
 import TodoList from "./pages/TodoList";
 // import TodoList from "./pages/TodoListClass";
 
@@ -43,7 +46,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <TodoList />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <TodoList />
+          </Route>
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }

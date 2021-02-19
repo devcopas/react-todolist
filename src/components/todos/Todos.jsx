@@ -7,8 +7,9 @@ import PropTypes from "prop-types";
 import Todo from "../todo/TodoClass";
 import Container from "../../layout/Container";
 
-// import React from "react";
+import React from "react";
 // import styles from "./todos.module.css";
+import { Link } from "react-router-dom";
 
 const Todos = ({ todos, completeTodo }) => {
   const theme = useTheme();
@@ -29,14 +30,21 @@ const Todos = ({ todos, completeTodo }) => {
             );
           })}
         {todos.length === 0 && (
-          <div css={styles.todosPlaceholder(theme)}>
-            <p>"No todos available"</p>
-            <p>
-              Add todo by clicking{" "}
-              <span css={styles.highlightText(theme)}>Add</span> button on the
-              top left corner.
-            </p>
-          </div>
+          <React.Fragment>
+            <div css={styles.todosPlaceholder(theme)}>
+              <p>"No todos available"</p>
+              <p>
+                Add todo by clicking{" "}
+                <span css={styles.highlightText(theme)}>Add</span> button on the
+                top left corner.
+              </p>
+            </div>
+            <div css={styles.seeAboutPage(theme)}>
+              <span>
+                Or visit <Link to="/about">About</Link> page
+              </span>
+            </div>
+          </React.Fragment>
         )}
       </Container>
     </section>
