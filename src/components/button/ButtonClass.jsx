@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   border: unset;
   outline: unset;
+
   &:hover {
     color: ${(props) => props.textColorHover};
     /* transform: scale(1.1, 1.1); */
