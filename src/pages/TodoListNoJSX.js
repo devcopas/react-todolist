@@ -6,8 +6,8 @@ import React, { useEffect } from "react";
 import Paper from "../components/paper/PaperNoJSX";
 import Header from "../components/header/HeaderNoJSX";
 import TodoForm from "../components/todoform/TodoFormNoJSX";
-import Todos from "../components/todos/Todos";
-import Container from "../layout/Container";
+import Todos from "../components/todos/TodosNoJSX";
+import Container from "../layout/ContainerNoJSX";
 
 const TodoList = () => {
   const [todos, setTodos] = React.useState(
