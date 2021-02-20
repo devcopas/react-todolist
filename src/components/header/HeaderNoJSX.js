@@ -40,7 +40,7 @@ const Header = ({ showAdd, showAddToggle, clearTodos }) => {
 };
 
 Header.propTypes = {
-  showAdd: PropTypes.func.isRequired,
+  showAdd: PropTypes.bool.isRequired,
   showAddToggle: PropTypes.func.isRequired,
   clearTodos: PropTypes.func.isRequired
 };

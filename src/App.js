@@ -2,8 +2,10 @@ import "./styles.css";
 import { ThemeProvider } from "@emotion/react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+// import TodoList from "./pages/TodoList";
 // import TodoList from "./pages/TodoListClass";
-import TodoList from "./pages/TodoList";
+import TodoList from "./pages/TodoListNoJSX";
+
 import About from "./pages/About";
 
 export default function App() {
