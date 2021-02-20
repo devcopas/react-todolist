@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import { withTheme } from "@emotion/react";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -111,4 +110,4 @@ class Container extends React.Component {
   };
 }
 
-export default withTheme(Container);
+export default Container;

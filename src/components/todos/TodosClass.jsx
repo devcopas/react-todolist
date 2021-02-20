@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
 
-import Container from "../../layout/Container";
+import Container from "../../layout/ContainerClass";
 import Todo from "../todo/TodoClass";
 
 class Todos extends React.Component {

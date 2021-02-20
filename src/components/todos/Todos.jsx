@@ -1,15 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { useTheme } from "@emotion/react";
 import * as styles from "./todos.styles";
-
 import PropTypes from "prop-types";
-// import Todo from "../todo/Todo";
-import Todo from "../todo/TodoClass";
-import Container from "../../layout/Container";
-
 import React from "react";
-// import styles from "./todos.module.css";
 import { Link } from "react-router-dom";
+// import styles from "./todos.module.css";
+
+import Todo from "../todo/Todo";
+import Container from "../../layout/Container";
 
 const Todos = ({ todos, completeTodo }) => {
   const theme = useTheme();

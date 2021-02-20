@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { withTheme } from "@emotion/react";
 
-import Container from "../../layout/Container";
-import Item from "../../layout/Item";
+import Container from "../../layout/ContainerClass";
+import Item from "../../layout/ItemClass";
 import Button from "../button/ButtonClass";
 
 const StyledH1 = styled.h1`

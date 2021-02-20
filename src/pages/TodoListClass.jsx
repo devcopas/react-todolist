@@ -1,37 +1,38 @@
 import React from "react";
+
 import Paper from "../components/paper/PaperClass";
 import Header from "../components/header/HeaderClass";
 import TodoForm from "../components/todoform/TodoFormClass";
 import Todos from "../components/todos/TodosClass";
-// import Container from "../layout/Container";
 import Container from "../layout/ContainerClass";
 
 class TodoList extends React.Component {
   state = {
-    todos: [],
-    showAdd: false
+    todos: JSON.parse(localStorage.getItem("todos")) || [],
+    showAdd: JSON.parse(localStorage.getItem("showAdd")) || false
   };
 
+  // use Effect
   componentDidMount() {
     const { todos, showAdd } = this.state;
-    const todosStateLocalStorage =
-      JSON.parse(localStorage.getItem("todos")) || todos;
-    const showAddStateLocalStorage =
-      JSON.parse(localStorage.getItem("showAdd")) || showAdd;
+    const todosStateLocalStorage = todos;
+    const showAddStateLocalStorage = showAdd;
 
-    console.log(this.state.showAdd);
-    this.setState({
-      todos: todosStateLocalStorage,
-      showAdd: showAddStateLocalStorage
-    });
+    todos !== todosStateLocalStorage &&
+      this.setState({ todos: todosStateLocalStorage });
+
+    showAdd !== showAddStateLocalStorage &&
+      this.setState({ showAdd: showAddStateLocalStorage });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     const { todos, showAdd } = this.state;
 
-    localStorage.setItem("todos", JSON.stringify(todos));
-    console.log("tes");
-    localStorage.setItem("showAdd", JSON.stringify(showAdd));
+    if (todos !== prevState.todos)
+      localStorage.setItem("todos", JSON.stringify(todos));
+
+    if (showAdd !== prevState.showAdd)
+      localStorage.setItem("showAdd", JSON.stringify(showAdd));
   }
 
   addTodo = (value) => {
