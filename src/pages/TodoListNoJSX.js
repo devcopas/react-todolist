@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 
 import Paper from "../components/paper/PaperNoJSX";
 import Header from "../components/header/HeaderNoJSX";
-import TodoForm from "../components/todoform/TodoForm";
+import TodoForm from "../components/todoform/TodoFormNoJSX";
 import Todos from "../components/todos/Todos";
 import Container from "../layout/Container";
 
