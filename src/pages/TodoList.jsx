@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-// import Header from "../components/header/HeaderNoJSX";
-
 import Paper from "../components/paper/Paper";
 import Header from "../components/header/Header";
 import TodoForm from "../components/todoform/TodoForm";
