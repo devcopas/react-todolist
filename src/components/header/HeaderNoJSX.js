@@ -1,12 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx*/
-import { jsx } from "@emotion/react";
+import { jsx, useTheme } from "@emotion/react";
 import PropTypes from "prop-types";
-import Button from "../button/ButtonNoJSX";
-import Container from "../../layout/Container";
-import Item from "../../layout/Item";
 import * as styles from "../header/header.styles";
-import { useTheme } from "@emotion/react";
+
+import Button from "../button/ButtonNoJSX";
+import Container from "../../layout/ContainerNoJSX";
+import Item from "../../layout/ItemNoJSX";
 
 const Header = ({ showAdd, showAddToggle, clearTodos }) => {
   const theme = useTheme();

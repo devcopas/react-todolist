@@ -5,22 +5,24 @@ export const todo = (theme) => {
     position: relative;
     flex: 1 0 auto;
     text-align: center;
-    max-height: 34px;
-    margin: 16px 0 0;
+    max-height: 50px;
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     cursor: pointer;
     border-bottom: 1px solid ${theme.color.primary.setLightness(20, 0.2)};
+
+    &:hover {
+      background-color: ${theme.color.dark.setLightness(20)};
+    }
   `;
 };
 
 export const todoText = ({ theme, isCompleted }) => {
   return css`
-    width: 100%;
-    height: 50px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: ${theme.color.light.base};
     letter-spacing: 1px;
 

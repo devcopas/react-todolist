@@ -34,7 +34,10 @@ const TodoList = () => {
     }
   };
 
-  const clearTodos = () => !showAdd && setTodos([]);
+  const clearTodos = () =>
+    !showAdd
+      ? setTodos([])
+      : alert("Please click close button before clear todos");
 
   const completeTodo = (index) => {
     const addedTodo = [...todos];

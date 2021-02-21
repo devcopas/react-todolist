@@ -33,6 +33,10 @@ const StyledTodo = styled.div`
   cursor: pointer;
   border-bottom: 1px solid
     ${(props) => props.theme.color.primary.setLightness(20, 0.2)};
+
+  &:hover {
+    background-color: ${(props) => props.theme.color.dark.setLightness(20)};
+  }
 `;
 
 const StyledTodoText = styled.span`
