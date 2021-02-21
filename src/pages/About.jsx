@@ -1,7 +1,7 @@
 import React from "react";
+
 import Paper from "../components/paper/Paper";
 import Container from "../layout/Container";
-
 import Content from "../components/aboutContent/Content";
 
 const About = () => {
