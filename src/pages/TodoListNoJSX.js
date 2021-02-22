@@ -34,9 +34,16 @@ const TodoList = () => {
     }
   };
 
+  async function clear() {
+    setTodos([]);
+    setTimeout(() => {
+      alert("todos has been clear");
+    }, 500);
+  }
+
   const clearTodos = () =>
     !showAdd
-      ? setTodos([])
+      ? window.confirm("Are you sure you want to clear this todos?") && clear()
       : alert("Please click close button before clear todos");
 
   const completeTodo = (index) => {

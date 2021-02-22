@@ -3,11 +3,12 @@ import { ThemeProvider } from "@emotion/react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // import TodoList from "./pages/TodoList";
-// import TodoList from "./pages/TodoListClass";
-import TodoList from "./pages/TodoListNoJSX";
+import TodoList from "./pages/TodoListClass";
+// import TodoList from "./pages/TodoListNoJSX";
 
 // import About from "./pages/About";
-import About from "./pages/AboutNoJSX";
+import About from "./pages/AboutClass";
+// import About from "./pages/AboutNoJSX";
 
 export default function App() {
   const theme = {
