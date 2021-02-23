@@ -2,7 +2,7 @@ import React from "react";
 
 import Paper from "../components/paper/PaperClass";
 import Container from "../layout/ContainerClass";
-import Content from "../components/aboutContent/Content";
+import Content from "../components/aboutContent/ContentClass";
 
 class About extends React.Component {
   render() {
