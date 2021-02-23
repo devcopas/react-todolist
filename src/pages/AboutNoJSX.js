@@ -5,7 +5,7 @@ import { jsx } from "@emotion/react";
 
 import Paper from "../components/paper/PaperNoJSX";
 import Container from "../layout/ContainerNoJSX";
-import Content from "../components/aboutContent/Content";
+import Content from "../components/aboutContent/ContentNoJSX";
 
 const About = () => {
   return jsx(
